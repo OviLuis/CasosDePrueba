@@ -1,0 +1,106 @@
+{% extends 'template_base.html' %}
+
+{% block title %}
+<title>UNITEST - DetailTest</title>
+{% endblock %}
+
+{% block estilo %}
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: center;    
+}
+</style>
+
+{% endblock %}
+
+
+
+ {% block contenido %}
+
+<table style="width:50%">
+  <tr>
+    <th>Logo</th>    
+    <th colspan="2">Plan de pruebas</th>
+    <th>Logo</th>    
+  </tr>
+  <tr>
+    <th>nombre empresa</th>
+    <th colspan="2" >Proyecto: {{ object.projectName }} </th>  
+    <th>Ciclo de prueba</th>  
+  </tr>
+  <tr>
+    <th colspan="4">Caso de Prueba: {{ object.testName }}</th>
+    
+  </tr>
+  <tr>
+    <th>Tipo de object </th>
+    <th colspan="3">{{ object.testType }}</th>
+  </tr>
+  <tr>
+    <th>ID prueba</th>
+    <th colspan="3" >{{ object.testId }}</th>
+  </tr>
+  <tr>
+    <th>Fecha de realizacion </th>
+    <th colspan="3" >{{ object.testDate }}</th>
+  </tr>
+  <tr>
+    <th>Realizada por </th>
+    <th colspan="3" >{{ object.testAuth }}</th>
+  </tr>
+  <tr>
+    <th>Objetivo de la object</th>
+    <th colspan="3" >{{ object.projectName }}</th>
+  </tr>
+  <tr>
+    <th>Requisitos</th>
+    <th colspan="3" >{{ object.testRequirements }}</th>
+  </tr>
+  <tr>
+    <th colspan="4">Detalles de la object</th>
+  </tr>
+  <tr>
+    <th>Paso No</th>
+    <th>Accion del usuario </th>
+    <th>Respuesta esperada </th>
+    <th>Resultado Obtenido</th>
+  </tr>
+  <tr>
+    <th ></th>
+    <th ></th>
+    <th ></th>
+    <th ></th>
+  </tr>
+  <tr>
+    <th ></th>
+    <th ></th>
+    <th ></th>
+    <th ></th>
+  </tr>
+  <tr>
+    <th colspan="4">Observaciones</th>
+   </tr>
+   <tr>
+     <th colspan="4" >{{ object.observations }}</th>
+   </tr>
+  <tr>
+    <th>Aprobado</th>
+    <th >{{ dato.veredict }}</th>
+    <th>Rechazado</th>
+    <th ></th>
+  </tr>
+  
+   
+</table>
+
+
+<a href="/pdf/{{ prueba.id}}"><button>Guardar</button>
+</a>
+{% endblock %}
+
+

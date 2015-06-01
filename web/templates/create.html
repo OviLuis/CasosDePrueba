@@ -1,0 +1,15 @@
+{% extends 'template_base.html' %}
+{% block title %}
+<title>UNITEST - CreateTest</title>
+{% endblock %}
+
+{% block contenido %}
+
+<h1>Crear Prueba</h1>
+<form action="" method="post">{% csrf_token %}
+	{{ form.as_p }}
+
+	 <input type="submit" value="Crear" />
+</form>
+
+{% endblock %}

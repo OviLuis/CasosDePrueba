@@ -1,0 +1,19 @@
+{% extends 'template_base.html' %}
+{% block title %}
+<title>UNITEST - Index</title>
+{% endblock %}
+
+{% block contenido %}
+
+Prueba creada satisfactoriamente
+
+<h1>Pruebas</h1>
+<ul>
+{% for prueba in object_list %}
+    <li><a href="/detail/{{ prueba.id}}">{{ prueba.id}}- {{ prueba.testName }} - {{ prueba.testType }}</a></li><a href="/update/{{ prueba.id}}">Actualizar</a> <a href="/delete/{{ prueba.id}}">Borrar</a>
+{% empty %}
+    <li>No test yet.</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
