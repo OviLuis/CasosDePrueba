@@ -34,8 +34,23 @@ def generar_pdf(html):
 
 def detail_Test(request, id_test):
 	    dato = get_object_or_404(Prueba, pk=id_test)
-	    html = render_to_string('pdf.html', {'pagesize':'A10','dato':dato}, context_instance=RequestContext(request))
+	    html = render_to_string('pdf.html', {'pagesize':'A4','dato':dato}, context_instance=RequestContext(request))
 	    return generar_pdf(html)
+
+
+# def create(request):
+#     if request.method == 'POST':
+#         formularioTest = PruebaForm(request.POST)
+#         if formularioTest.is_valid():
+#             form = formularioTest.save(commit=False)
+#             form.save()
+#             messages.add_message(request, messages.INFO, 'Test creado')
+#             return render_to_response("inicio.html", RequestContext(request))
+#         else:
+#             return render_to_response('create.html', {'formularioTest': formularioTest}, context_instance=RequestContext(request))
+#     else:
+#         formularioTest = PruebaForm()
+#         return render_to_response('create.html', {'formularioTest': formularioTest }, context_instance=RequestContext(request))
 
 
 
@@ -47,8 +62,8 @@ class CreateTest(CreateView):
 	success_url = '/'
 
 	def form_valid(self, form):
-	        print 'prueba creada'
-	        return super(CreateTest, self).form_valid(form)
+	    print 'prueba creada'
+	    return super(CreateTest, self).form_valid(form)
 
 	def form_invalid(self,form):
 		print 'no se pudo crear la prueba'
@@ -125,6 +140,8 @@ class Prue(PDFTemplateView):
 	 		**kwargs
 	 		)
 
-
+class About(TemplateView):
+	template_name = 'About.html'
+		
 		
 		

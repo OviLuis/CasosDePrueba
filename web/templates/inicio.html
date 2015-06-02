@@ -6,12 +6,12 @@
 {% block contenido %}
 
 <div class="panel panel-default">
-  <div class="panel-heading"><h3>Pruebas</h3></div>
+  <div class="panel-heading"><h3>Casos de Pruebas</h3></div>
   <div class="panel-body">
     <ul>
 	{% for prueba in object_list %}
 	    <li >
-		    <a style="font-size:30px; color:black;" href="/detail/{{ prueba.id}}">{{ prueba.testId}}- {{ prueba.testName }} - {{ prueba.testType }}</a><br>
+		    <a style="font-size:30px; color:black;" href="/detail/{{ prueba.id}}">{{ prueba.testId}} - {{ prueba.testName }} </a><br>
 		    <a href="/update/{{ prueba.id}}">Actualizar</a> 
 		    <a href="/delete/{{ prueba.id}}">Borrar</a>
 	    </li>

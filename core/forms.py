@@ -21,8 +21,7 @@ class PruebaForm(ModelForm):
 		model = Prueba
 		fields = ['projectName','testName','testId','testType','testDate','testAuth','testObjective','testRequirements','userAction','expectedResult','result','observations', 'calificacion']
 
-	def __init__(self, *args, **kwargs):        
-            super(PruebaForm,self).__init__()
+	
 
 
 
