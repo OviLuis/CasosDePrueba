@@ -8,15 +8,15 @@ class Prueba(models.Model):
 	testType =	models.CharField(max_length = 50, verbose_name = 'Tipo de Prueba')
 	testDate = models.DateField(auto_now = False)
 	testAuth = models.CharField(max_length = 100, verbose_name = 'Realizada por')
-	testObjective = models.TextField(verbose_name = 'Objetivo de la prueba' )
+	testObjective = models.CharField(max_length = 100,verbose_name = 'Objetivo de la prueba' )
 	testRequirements = models.CharField(max_length = 50, verbose_name = 'Requerimientos')
-	"""stage = models.CharField(max_length = 5, verbose_name = 'Paso No') 
-	userAction = models.TextField(verbose_name = 'Accion del usuario')
-	expectedResult = models.TextField(verbose_name = 'Resultado esperado')
-	result = models.TextField(verbose_name = 'Resultado Obtenido')"""
-	observations = models.TextField(verbose_name = 'Observaciones')
+	userAction = models.CharField(max_length = 100, verbose_name = 'Accion del usuario' )
+	expectedResult = models.CharField(max_length = 100, verbose_name = 'Resultado esperado' )
+	result = models.CharField(max_length = 100, verbose_name = 'Resultado Obtenido')
+	observations = models.CharField(max_length = 100, verbose_name = 'Observaciones')
 	CHOICES = (('aprovado','aprovado'), ('rechazado', 'rechazado'))
-	veredict =  models.CharField(max_length = 10, choices = CHOICES)
+	calificacion =  models.CharField(max_length = 10, choices = CHOICES)
+
 	
 
 	def __unicode__(self):

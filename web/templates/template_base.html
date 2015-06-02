@@ -4,47 +4,50 @@
 <html lang="es">
 	<head>
 		
-		{% block estilo%}
-		{% endblock %}
+
 		
 		<meta charset="iso-8859-1">
-		<meta charset="UTF-8"> 
-		<!-- <meta name="description" content="Ejemplo de HTML5">
-		<meta name="keywords" content="HTML5, CSS3, JavaScript"> -->
+		 
+		
 		{% block title %}
 		{% endblock %}
 
-		 {% load staticfiles %} 
-		<!-- <link rel="stylesheet" href="{{ STATIC_URL }}libs/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="{{ STATIC_URL }}estilos.css"> -->
-		<link rel="stylesheet" href="{% static 'libs/bootstrap/bootstrap.min.css' %}">
-		<link rel="stylesheet" href="{% static 'estilos.css' %}">
+		{% load staticfiles %}
+		<link type="text/css" rel="stylesheet" href="{% static 'libs/bootstrap/bootstrap.min.css' %}"/>
+		<link  type="text/css" rel="stylesheet" href="{% static 'estilos.css' %}"  >
+		<!-- <link href="{% static 'html_estilo.css' %}" rel="stylesheet" type="text/css"> -->
 		
-		</head>
+		
+		
+	</head>
+
 	<body>
-		<header>
-			<h1>UNITEST</h1>
-		</header>
-		<nav>
-			<ul>
-				<li><a href="/">Inicio</a> </li>
-				<li><a href="/create/">crear pueba</a></li>
-				<li>Acerca de </li>
-				
-			</ul>
-		</nav>
-		<section>
-			{% block contenido %}
+		<div class="caja">
+				<header class="page-header">
+				<h1>UNITEST</h1>
+			</header>
 
-			{% endblock %}
+			<nav role="navigation">
+				<ul class="nav nav-tabs">
+					<li role="presentation"><a href="/">Inicio</a> </li>
+					<li role="presentation"><a href="/create/">crear pueba</a></li>
+					<li role="presentation"> <a href="#"> Acerca de</a> </li>
+				</ul>
+			</nav>
 
-		</section>
-		<aside>
-			<blockquote>Mensaje número uno</blockquote>
-			<blockquote>Mensaje número dos</blockquote>
-		</aside>
-		<footer>
-			Derechos Reservados &copy; 2010-2011
-		</footer>
+			<section>
+				{% block contenido %}
+
+				{% endblock %}
+
+			</section>
+			
+			<footer class="panel-footer">
+				Luis Gonzalez - 1154010<br>
+				Universidad del valle<br>
+				Técnicas de pruebas de softwate<br>
+			</footer>
+		</div>
+		
 	</body>
 	</html>

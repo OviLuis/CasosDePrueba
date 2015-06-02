@@ -6,10 +6,13 @@
 {% block contenido %}
 
 <h1>Crear Prueba</h1>
-<form action="" method="post">{% csrf_token %}
-	{{ form.as_p }}
 
-	 <input type="submit" value="Crear" />
-</form>
+	<div class="form-group ">
+		<form id="formCreate"  action="" method="post">{% csrf_token %}
+			{{ form.as_p }}
+	   		<input id="botonCreate" type="submit" value="Create" class="btn btn-primary" />
+		</form>
+	</div>
+
 
 {% endblock %}

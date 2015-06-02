@@ -1,7 +1,4 @@
-
-
-
-    <style>
+<style>
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -52,25 +49,18 @@ th, td {
     <th colspan="3" >{{ dato.testRequirements }}</th>
   </tr>
   <tr>
-    <th colspan="4">Detalles de la dato</th>
+    <th colspan="4">Detalles de la prueba</th>
+  </tr>
+   <tr>
+    <th colspan="2">Accion del usuario </th>
+    <th >Respuesta esperada </th>
+    <th >Resultado Obtenido</th>
   </tr>
   <tr>
-    <th>Paso No</th>
-    <th>Accion del usuario </th>
-    <th>Respuesta esperada </th>
-    <th>Resultado Obtenido</th>
-  </tr>
-  <tr>
-    <th ></th>
-    <th ></th>
-    <th ></th>
-    <th ></th>
-  </tr>
-  <tr>
-    <th ></th>
-    <th ></th>
-    <th ></th>
-    <th ></th>
+    <th colspan="2">{{ dato.userAction }}</th>
+    <th >{{ dato.expectedResult }}</th>
+    <th >{{ dato.result }}</th>
+    
   </tr>
   <tr>
     <th colspan="4">Observaciones</th>
@@ -79,10 +69,9 @@ th, td {
      <th colspan="4" >{{ dato.observations }}</th>
    </tr>
   <tr>
-    <th>Aprobado</th>
-    <th >{{ dato.veredict }}</th>
-    <th>Rechazado</th>
-    <th ></th>
+    <th >Calificación</th>
+    <th colspan="3" >{{ dato.calificacion }}</th>
+    
   </tr>
   
    

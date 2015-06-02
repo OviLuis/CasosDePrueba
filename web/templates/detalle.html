@@ -4,102 +4,83 @@
 <title>UNITEST - DetailTest</title>
 {% endblock %}
 
-{% block estilo %}
-<style>
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 5px;
-    text-align: center;    
-}
-</style>
 
-{% endblock %}
 
 
 
  {% block contenido %}
 
-<table style="width:50%">
+<table style="width:50%"  class="table table-bordered">
   <tr>
-    <th>Logo</th>    
-    <th colspan="2">Plan de pruebas</th>
-    <th>Logo</th>    
+    <th style="font-style: italic">Logo</th>    
+    <th colspan="2" style="font-style: italic">Plan de pruebas</th>
+    <th style="font-style: italic">Logo</th>    
   </tr>
   <tr>
-    <th>nombre empresa</th>
-    <th colspan="2" >Proyecto: {{ object.projectName }} </th>  
-    <th>Ciclo de prueba</th>  
+    <th style="font-style: italic">nombre empresa</th>
+    <th colspan="2" style="font-style: italic" >Proyecto: {{ object.projectName }} </th>  
+    <th style="font-style: italic">Ciclo de prueba</th>  
   </tr>
   <tr>
-    <th colspan="4">Caso de Prueba: {{ object.testName }}</th>
+    <th colspan="4" style="font-style: italic">Caso de Prueba: {{ object.testName }}</th>
     
   </tr>
   <tr>
-    <th>Tipo de object </th>
+    <th style="font-style: italic">Tipo de object </th>
     <th colspan="3">{{ object.testType }}</th>
   </tr>
   <tr>
-    <th>ID prueba</th>
+    <th style="font-style: italic">ID prueba</th>
     <th colspan="3" >{{ object.testId }}</th>
   </tr>
   <tr>
-    <th>Fecha de realizacion </th>
+    <th style="font-style: italic">Fecha de realizacion </th>
     <th colspan="3" >{{ object.testDate }}</th>
   </tr>
   <tr>
-    <th>Realizada por </th>
+    <th style="font-style: italic">Realizada por </th>
     <th colspan="3" >{{ object.testAuth }}</th>
   </tr>
   <tr>
-    <th>Objetivo de la object</th>
+    <th style="font-style: italic">Objetivo de la prueba</th>
     <th colspan="3" >{{ object.projectName }}</th>
   </tr>
   <tr>
-    <th>Requisitos</th>
+    <th style="font-style: italic">Requisitos</th>
     <th colspan="3" >{{ object.testRequirements }}</th>
   </tr>
   <tr>
-    <th colspan="4">Detalles de la object</th>
+    <th colspan="4" style="font-style: italic">Detalles de la prueba</th>
   </tr>
   <tr>
-    <th>Paso No</th>
-    <th>Accion del usuario </th>
-    <th>Respuesta esperada </th>
-    <th>Resultado Obtenido</th>
+    <th colspan="2" style="font-style: italic">Accion del usuario </th>
+    <th  style="font-style: italic">Respuesta esperada </th>
+    <th  style="font-style: italic">Resultado Obtenido</th>
   </tr>
   <tr>
-    <th ></th>
-    <th ></th>
-    <th ></th>
-    <th ></th>
+    <th colspan="2">{{ object.userAction }}</th>
+    <th >{{ object.expectedResult }}</th>
+    <th >{{ object.result }}</th>
+    
   </tr>
+  
   <tr>
-    <th ></th>
-    <th ></th>
-    <th ></th>
-    <th ></th>
-  </tr>
-  <tr>
-    <th colspan="4">Observaciones</th>
+    <th colspan="4" style="font-style: italic">Observaciones</th>
    </tr>
    <tr>
      <th colspan="4" >{{ object.observations }}</th>
    </tr>
   <tr>
-    <th>Aprobado</th>
-    <th >{{ dato.veredict }}</th>
-    <th>Rechazado</th>
-    <th ></th>
+    <th style="font-style: italic">Calificación</th>
+    <th colspan="3" >{{ object.calificacion }}</th>
+    
   </tr>
   
    
 </table>
 
 
-<a href="/pdf/{{ prueba.id}}"><button>Guardar</button>
+<a href="/pdf/{{ prueba.id}}"><input id="botonGuardar" type="submit" value="Guardar" class="btn btn-primary" />
 </a>
 {% endblock %}
 

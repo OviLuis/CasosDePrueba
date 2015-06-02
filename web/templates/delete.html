@@ -4,8 +4,13 @@
 {% endblock %}
 
 {% block contenido %}
-<form action="" method="post">{% csrf_token %}
-    <p>Are you sure you want to delete "{{ object }}"?</p>
-    <input type="submit" value="Confirm" />
-</form>
+<div class="form-group" >
+	<form  id="formDelete" action="" method="post">{% csrf_token %}
+	    <p>Esta seguro que desea eliminar "{{ object }}" ?</p>
+	    <input type="submit" value="Confirmar" class="btn btn-primary" />
+	    <a href="/"><input type="button" action= "/" value="Cancelar" class="btn btn-primary" />
+	    </a>
+	</form>
+</div>
+
 {% endblock %}

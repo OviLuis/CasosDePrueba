@@ -4,8 +4,17 @@
 {% endblock %}
 
 {% block contenido %}
-<form action="" method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Update" />
-</form>
+
+
+	<div class="form-group ">
+		<form id="formUpdate"  action="" method="post">{% csrf_token %}
+			{{ form.as_p }}
+	   		<input id="botonUpdate" type="submit" value="Update" class="btn btn-primary" />
+		</form>
+	</div>
+
+
+
+
+
 {% endblock %}

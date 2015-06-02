@@ -1,0 +1,70 @@
+.caja{
+	margin-top: 20px;
+	margin-right: 150px;
+	margin-bottom: 20px;
+	margin-left: 150px;
+}
+
+.panel {
+	margin: 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+		
+}
+
+.panel-heading{
+	padding: 10px;
+}
+
+#formUpdate{
+	margin: 150px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#botonUpdate{
+	margin: 30px;
+	margin-left: 350px;
+}
+
+#formCreate{
+	margin: 150px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#botonCreate{
+	margin: 30px;
+	margin-left: 350px;
+}
+
+#formDelete{
+	margin: 370px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+table, th, td {
+	margin: 50px;
+	margin-bottom: 0;
+	margin-left: 250px;
+    }
+th, td {
+    padding: 5px;
+    text-align: center;    
+}
+
+footer {
+	padding: 5px;
+    text-align: center;	
+    margin: 10px;
+}
+
+
+#botonGuardar{
+	margin: 30px;
+	margin-left: 470px;
+	
+}
+
+
