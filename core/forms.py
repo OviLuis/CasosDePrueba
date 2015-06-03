@@ -5,8 +5,8 @@ from .models import Prueba
 
 class PruebaForm(ModelForm):
 	projectName = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control input-sm', 'placeholder': 'Nombre del proyecto'}))
-	testName  = forms.CharField( widget=forms.TextInput(attrs={'class': 'form-control input-sm', 'placeholder': 'Nombre de Prueba'}))
-	testId = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'form-control input-sm', 'placeholder': 'Id prueba'}))
+	testName  = forms.CharField( widget=forms.TextInput(attrs={'class': 'form-control input-sm', 'placeholder': 'Nombre del caso de  Prueba'}))
+	testId = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'form-control input-sm', 'placeholder': 'Id del caso de prueba'}))
 	testType =	forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control input-sm', 'placeholder': 'Tipo de prueba ej: funcional, automatica etc.'}))
 	testDate = forms.DateField(widget=forms.TextInput(attrs={'class': 'form-control input-sm', 'placeholder': 'Fecha aaaa/mm/dd'}))
 	testAuth = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control input-sm', 'placeholder': 'Autor'}))

@@ -5,15 +5,23 @@
 
 {% block contenido %}
 
-<h1>Crear Prueba</h1>
+<h1>Crear Caso Prueba</h1>
 
 	<div class="form-group ">
 		<form id="formCreate"  action="" method="post">{% csrf_token %}
 			{{ form.as_p }}
 			
-	   		<input id="botonCreate" type="submit" value="Create" class="btn btn-primary" />
+	   		<input id="botonCreate" type="submit" value="Crear" class="btn btn-primary" />
 		</form>
 	</div>
+
+	{% if messages %}
+			<ul class="messages">
+				{% for message in messages %}
+				<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message}}</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
 
 
 {% endblock %}

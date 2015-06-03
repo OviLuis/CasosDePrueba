@@ -45,13 +45,31 @@
 }
 
 table, th, td {
-	margin: 50px;
-	margin-bottom: 0;
-	margin-left: 250px;
-    }
+  font-family: "Times New Roman", Georgia, Serif;
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: #616161;
+    font-size: 15px;
+}
 th, td {
     padding: 5px;
     text-align: center;    
+}
+
+#columna{
+  background-color: #CCCCCC;
+}
+
+
+.center{
+  
+}
+#titulo{
+	text-align: center;
+  background-color: #0096a3;
+  color: white;
+  font-size: 17px;
+  font-weight:bold;
 }
 
 footer {
